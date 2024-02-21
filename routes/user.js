@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
 router.post("/create", async (req, res) => {
   const { name, age } = req.body;
 
+  // console.log(req.body);
   const checkUser = await userModel.findOne({ name });
 
   if (checkUser) {
